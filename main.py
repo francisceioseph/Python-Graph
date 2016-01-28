@@ -1,18 +1,48 @@
 from graph import Graph
 
 
-graph = Graph(30)
+def menu(graph):
 
-graph.add_node("A")
-graph.add_node("B")
-graph.add_node("C")
-graph.add_node("D")
-graph.add_node("E")
-graph.add_node("F")
+    print "========================"
+    print "=        Graph         ="
+    print "========================"
 
-graph.add_arc_with_labels("F", "A")
-graph.add_arc_with_labels("A", "B")
-graph.add_arc_with_labels("B", "C")
+    if graph is None:
+        print "1 - Create a graph"
+    else:
+        print "2 - Insert a node with label"
+        print "3 - Insert an arc"
+        print "4 - Show nodes"
+        print "5 - Show adjacency matrix"
 
-graph.show_nodes()
-graph.show_adjacency_matrix()
+
+def main():
+    graph = None
+    option = 0
+
+    while option != -1:
+        menu(graph)
+        option = input("Type your option: ")
+
+        if option == 1 and graph is None:
+            max_size = input("Enter the graph max size: ")
+            graph = Graph(max_size)
+        else:
+            if option == 2:
+                label = input("Node label: ")
+                graph.add_node(label)
+
+            elif option == 3:
+                label_from = input("Label of from node: ")
+                label_to = input("Label of to node: ")
+
+                graph.add_arc_with_labels(label_from, label_to)
+
+            elif option == 4:
+                graph.show_nodes()
+
+            elif option == 5:
+                graph.show_adjacency_matrix()
+
+
+main()
