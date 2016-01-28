@@ -66,11 +66,14 @@ class Graph:
         print "=  Adjacency Matrix in Graph  ="
         print "==============================="
 
+        print " ",
+
         for node in self.nodes:
             print node.label,
         print
 
         for i in range(self.number_of_nodes()):
+            print self.nodes[i].label,
             for j in range(self.number_of_nodes()):
                 print self.adjacency_matrix[i][j],
             print

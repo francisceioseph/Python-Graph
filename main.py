@@ -4,7 +4,7 @@ from graph import Graph
 def menu(graph):
 
     print "========================"
-    print "=        Graph         ="
+    print "=         Main         ="
     print "========================"
 
     if graph is None:
@@ -29,12 +29,12 @@ def main():
             graph = Graph(max_size)
         else:
             if option == 2:
-                label = input("Node label: ")
+                label = raw_input("Node label:")
                 graph.add_node(label)
 
             elif option == 3:
-                label_from = input("Label of from node: ")
-                label_to = input("Label of to node: ")
+                label_from = raw_input("Label of from node:")
+                label_to = raw_input("Label of to node: ")
 
                 graph.add_arc_with_labels(label_from, label_to)
 
