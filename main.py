@@ -14,4 +14,5 @@ graph.add_arc_with_labels("F", "A")
 graph.add_arc_with_labels("A", "B")
 graph.add_arc_with_labels("B", "C")
 
+graph.show_nodes()
 graph.show_adjacency_matrix()

@@ -43,6 +43,15 @@ class Graph:
     def show_node_at_index(self, node_number):
         print(self.adjacency_matrix[node_number].label)
 
+    def show_nodes(self):
+        print "========================"
+        print "=    Nodes in Graph    ="
+        print "========================"
+
+        for node in self.nodes:
+            print node
+        print
+
     def show_node_by_label(self, label):
         found_label = None
 
@@ -53,6 +62,10 @@ class Graph:
         print(found_label)
 
     def show_adjacency_matrix(self):
+        print "==============================="
+        print "=  Adjacency Matrix in Graph  ="
+        print "==============================="
+
         for node in self.nodes:
             print node.label,
         print
