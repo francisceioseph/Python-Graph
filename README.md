@@ -1,5 +1,5 @@
 # Python-Graph
-This is a simples implementation of a graph in python.
+This is a simple implementation of a graph in python.
 
 You'll need:
 
